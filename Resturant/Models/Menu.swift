@@ -13,10 +13,5 @@ struct Menu {
     init(subMenus: [SubMenu]) {
         self.subMenus = subMenus
     }
-//    var appetizerMenu = SubMenu(dishType: .appetizer)
-//    var breakFastMenu = SubMenu(dishType: .breakfast)
-//    var lunchMenu = SubMenu(dishType: .lunch)
-//    var dinnerMenu = SubMenu(dishType: .dinner)
-//    var dessertMenu = SubMenu(dishType: .dessert)
     
 }
