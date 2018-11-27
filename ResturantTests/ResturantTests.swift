@@ -27,6 +27,20 @@ class ResturantTests: XCTestCase {
         XCTAssertEqual(resturants.count, restViewModel.resturantCount())
     }
     
+    func testResturantName() {
+        let resturants = MockData.fetchMockResturants()
+        let restViewModel = ResturantViewModel(resturants: resturants)
+        XCTAssertEqual(resturants[0].resturantName, restViewModel.resturantName(index: 0))
+        XCTAssertEqual(resturants[1].resturantName, restViewModel.resturantName(index: 1))
+        XCTAssertEqual(resturants[2].resturantName, restViewModel.resturantName(index: 2))
+    }
+    
+    func testResturantMenu() {
+        let resturants = MockData.fetchMockResturants()
+        let restViewModel = ResturantViewModel(resturants: resturants)
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus[0].dishes[0].name, restViewModel.resturantMenu(index: 0).subMenus[0].dishes[0].name)
+    }
+    
     func testSubMenuCount() {
         guard let menu = menu else {
             XCTAssert(false)

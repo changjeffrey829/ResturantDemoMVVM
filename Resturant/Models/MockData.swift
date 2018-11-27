@@ -20,13 +20,13 @@ struct MockData {
     
     static func fetchMockMenu(basePrice: Double = 1.00) -> Menu {
         
-        let appetizerDishes = [Dish(name: "app1", price: basePrice * 1.00), Dish(name: "app2", price: basePrice * 2.00), Dish(name: "app3", price: basePrice * 3.00)]
+        let appetizerDishes = [Dish(name: "app\(basePrice)", price: basePrice * 1.00), Dish(name: "app\(basePrice * 2)", price: basePrice * 2.00), Dish(name: "app\(basePrice * 3)", price: basePrice * 3.00)]
         let appetizerSubMenu = SubMenu(dishType: .appetizer, dishes: appetizerDishes)
         
-        let lunchDishes = [Dish(name: "lunch1", price: basePrice * 1.00), Dish(name: "lunch2", price: basePrice * 2.00), Dish(name: "lunch3", price: basePrice * 3.00)]
+        let lunchDishes = [Dish(name: "lunch\(basePrice)", price: basePrice * 1.00), Dish(name: "lunch\(basePrice * 2)", price: basePrice * 2.00), Dish(name: "lunch\(basePrice * 3)", price: basePrice * 3.00)]
         let lunchSubMenu = SubMenu(dishType: .lunch, dishes: lunchDishes)
         
-        let dinnerDishes = [Dish(name: "dinner1", price: basePrice * 1.00), Dish(name: "dinner2", price: basePrice * 2.00), Dish(name: "dinner3", price: basePrice * 3.00)]
+        let dinnerDishes = [Dish(name: "dinner\(basePrice)", price: basePrice * 1.00), Dish(name: "dinner\(basePrice * 2)", price: basePrice * 2.00), Dish(name: "dinner\(basePrice * 3)", price: basePrice * 3.00)]
         let dinnerSubMenu = SubMenu(dishType: .dinner, dishes: dinnerDishes)
         let menu = Menu(subMenus: [appetizerSubMenu, lunchSubMenu, dinnerSubMenu])
         return menu
