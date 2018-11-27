@@ -11,8 +11,8 @@ import Foundation
 
 class NetworkManager {
     static let share = NetworkManager()
-    func fetchData() -> Menu? {
-        let mockData = MockData.fetchMockData()
+    func fetchData() -> [Resturant]? {
+        let mockData = MockData.fetchMockResturants()
         return mockData
     }
     

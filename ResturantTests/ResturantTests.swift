@@ -14,13 +14,18 @@ class ResturantTests: XCTestCase {
     var menu: Menu?
     
     override func setUp() {
-        menu = MockData.fetchMockData()
+        menu = MockData.fetchMockMenu()
     }
 
     override func tearDown() {
         menu = nil
     }
-
+    
+    func testResturantCount() {
+        let resturants = MockData.fetchMockResturants()
+        let restViewModel = ResturantViewModel(resturants: resturants)
+        XCTAssertEqual(resturants.count, restViewModel.resturantCount())
+    }
     
     func testSubMenuCount() {
         guard let menu = menu else {

@@ -8,23 +8,25 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class MenuController: UITableViewController {
     
     
     var menusViewModel: MenusViewModel?
+    var cellID = "menuCellID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
-        fetchData()
+        tableView.register(MenuTableCell.self, forCellReuseIdentifier: cellID)
+        
     }
     
-    
-    private func fetchData() {
-        guard let menu = NetworkManager.share.fetchData() else {return}
+    func config(menu: Menu) {
         self.menusViewModel = MenusViewModel(menu: menu)
+        tableView.reloadData()
     }
-    
+}
+
+extension MenuController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return menusViewModel?.subMenusCount() ?? 0
     }
@@ -34,12 +36,9 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
-        cell.backgroundColor = .blue
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MenuTableCell
         cell.textLabel?.text = menusViewModel?.selectDishText(indexPath: indexPath).name
+        cell.detailTextLabel?.text = "\(menusViewModel?.selectDishText(indexPath: indexPath).price ?? 0)"
         return cell
     }
-    
-
 }
-
