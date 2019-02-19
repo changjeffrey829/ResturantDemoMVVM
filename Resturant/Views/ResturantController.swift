@@ -8,10 +8,13 @@
 
 import UIKit
 
-class MenuController: UITableViewController {
+class ResturantController: UITableViewController {
     
-    
-    var menusViewModel: MenusViewModel?
+    var resturantViewModel: ResturantViewModel? {
+        didSet {
+            
+        }
+    }
     var cellID = "menuCellID"
     
     override func viewDidLoad() {
@@ -19,26 +22,21 @@ class MenuController: UITableViewController {
         tableView.register(MenuTableCell.self, forCellReuseIdentifier: cellID)
         
     }
-    
-    func config(menu: Menu) {
-        self.menusViewModel = MenusViewModel(menu: menu)
-        tableView.reloadData()
-    }
 }
 
-extension MenuController {
+extension ResturantController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return menusViewModel?.subMenusCount() ?? 0
+        return resturantViewModel?.subMenuCount() ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menusViewModel?.dishesCount(section: section) ?? 0
+        return resturantViewModel?.dishCount(section: section) ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MenuTableCell
-        cell.textLabel?.text = menusViewModel?.selectDishText(indexPath: indexPath).name
-        cell.detailTextLabel?.text = "\(menusViewModel?.selectDishText(indexPath: indexPath).price ?? 0)"
+        cell.textLabel?.text = resturantViewModel?.dishName(indexPath: indexPath)
+        cell.detailTextLabel?.text = resturantViewModel?.dishPrice(indexPath: indexPath)
         return cell
     }
 }

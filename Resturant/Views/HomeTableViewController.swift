@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ResturantsViewController: UITableViewController {
+class HomeTableViewController: UITableViewController {
     
-    var resturantViewModel: ResturantViewModel?
+    var resturantViewModel = [ResturantViewModel]()
     var cellID = "restCellID"
     
     override func viewDidLoad() {
@@ -21,26 +21,25 @@ class ResturantsViewController: UITableViewController {
     
     private func fetchData() {
         guard let resturants = NetworkManager.share.fetchData() else {return}
-        resturantViewModel = ResturantViewModel(resturants: resturants)
+        resturantViewModel = resturants.map{return ResturantViewModel(resturant: $0)}
         
     }
 }
 
-extension ResturantsViewController {
+extension HomeTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resturantViewModel?.resturantCount() ?? 0
+        return resturantViewModel.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let restVM = resturantViewModel else {return}
-        let vc = MenuController()
-        vc.config(menu: restVM.resturantMenu(index: indexPath.row))
+        let vc = ResturantController()
+        vc.resturantViewModel = resturantViewModel[indexPath.item]
         navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = resturantViewModel?.resturantName(index: indexPath.row)
+        cell.textLabel?.text = resturantViewModel[indexPath.item].resturantName
         return cell
     }
 }

@@ -9,21 +9,29 @@
 import Foundation
 
 struct ResturantViewModel {
-    private var resturants = [Resturant]()
     
-    init(resturants: [Resturant]) {
-        self.resturants = resturants
+    var resturantMenu: Menu
+    let resturantName: String
+    let resturantNumber: Int
+    init(resturant: Resturant) {
+        self.resturantName = resturant.resturantName
+        self.resturantMenu = resturant.resturantMenu
+        self.resturantNumber = resturant.resturantNumber
     }
     
-    func resturantCount() -> Int {
-        return resturants.count
+    func subMenuCount() -> Int {
+        return resturantMenu.subMenus.count
     }
     
-    func resturantName(index: Int) -> String {
-        return resturants[index].resturantName
+    func dishCount(section: Int) -> Int {
+        return resturantMenu.subMenus[section].dishes.count
     }
     
-    func resturantMenu(index: Int) -> Menu {
-        return resturants[index].resturantMenu
+    func dishName(indexPath: IndexPath) -> String {
+        return resturantMenu.subMenus[indexPath.section].dishes[indexPath.item].name
+    }
+    
+    func dishPrice(indexPath: IndexPath) -> String {
+        return "\(resturantMenu.subMenus[indexPath.section].dishes[indexPath.item].price)"
     }
 }

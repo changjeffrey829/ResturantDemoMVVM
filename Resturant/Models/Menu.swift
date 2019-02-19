@@ -13,5 +13,4 @@ struct Menu {
     init(subMenus: [SubMenu]) {
         self.subMenus = subMenus
     }
-    
 }
