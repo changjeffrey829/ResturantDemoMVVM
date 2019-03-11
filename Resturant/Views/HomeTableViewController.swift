@@ -39,7 +39,7 @@ extension HomeTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = resturantViewModel[indexPath.item].resturantName
+        cell.textLabel?.text = resturantViewModel[indexPath.item].currentResturantName()
         return cell
     }
 }

@@ -10,13 +10,21 @@ import Foundation
 
 struct ResturantViewModel {
     
-    var resturantMenu: Menu
-    let resturantName: String
-    let resturantNumber: Int
+    fileprivate var resturantMenu: Menu
+    fileprivate let resturantName: String
+    fileprivate let resturantID: Int
     init(resturant: Resturant) {
         self.resturantName = resturant.resturantName
         self.resturantMenu = resturant.resturantMenu
-        self.resturantNumber = resturant.resturantNumber
+        self.resturantID = resturant.resturantID
+    }
+    
+    func currentResturantName() -> String {
+        return resturantName
+    }
+    
+    func currentResturantID() -> Int {
+        return resturantID
     }
     
     func subMenuCount() -> Int {

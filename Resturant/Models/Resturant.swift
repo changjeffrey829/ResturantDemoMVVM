@@ -11,6 +11,6 @@ import Foundation
 struct Resturant {
     var resturantMenu: Menu
     let resturantName: String
-    let resturantNumber: Int
+    let resturantID: Int
     
 }

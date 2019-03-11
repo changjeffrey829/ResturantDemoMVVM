@@ -21,55 +21,50 @@ class ResturantTests: XCTestCase {
         menu = nil
     }
     
-    func testResturantCount() {
+    func testSubMenuCount() {
         let resturants = MockData.fetchMockResturants()
-        let restViewModel = ResturantViewModel(resturants: resturants)
-        XCTAssertEqual(resturants.count, restViewModel.resturantCount())
+        let restVMs = resturants.map{ResturantViewModel(resturant: $0)}
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus.count, restVMs[0].subMenuCount())
+    }
+    
+    func testDishCount() {
+        let resturants = MockData.fetchMockResturants()
+        let restViewModels = resturants.map{ResturantViewModel(resturant: $0)}
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus[0].dishes.count, restViewModels[0].dishCount(section: 0))
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus[1].dishes.count, restViewModels[0].dishCount(section: 1))
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus[2].dishes.count, restViewModels[0].dishCount(section: 2))
+    }
+    
+    func testDishName() {
+        let resturants = MockData.fetchMockResturants()
+        let restViewModels = resturants.map{ResturantViewModel(resturant: $0)}
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus[0].dishes[0].name, restViewModels[0].dishName(indexPath: IndexPath(item: 0, section: 0)))
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus[0].dishes[1].name, restViewModels[0].dishName(indexPath: IndexPath(item: 1, section: 0)))
+        XCTAssertEqual(resturants[0].resturantMenu.subMenus[0].dishes[2].name, restViewModels[0].dishName(indexPath: IndexPath(item: 2, section: 0)))
+    }
+    
+    func testDishPrice() {
+        let resturants = MockData.fetchMockResturants()
+        let restViewModels = resturants.map{ResturantViewModel(resturant: $0)}
+        XCTAssertEqual("\(resturants[0].resturantMenu.subMenus[0].dishes[0].price)", restViewModels[0].dishPrice(indexPath: IndexPath(item: 0, section: 0)))
+        XCTAssertEqual("\(resturants[0].resturantMenu.subMenus[0].dishes[1].price)", restViewModels[0].dishPrice(indexPath: IndexPath(item: 1, section: 0)))
+        XCTAssertEqual("\(resturants[0].resturantMenu.subMenus[0].dishes[2].price)", restViewModels[0].dishPrice(indexPath: IndexPath(item: 2, section: 0)))
     }
     
     func testResturantName() {
         let resturants = MockData.fetchMockResturants()
-        let restViewModel = ResturantViewModel(resturants: resturants)
-        XCTAssertEqual(resturants[0].resturantName, restViewModel.resturantName(index: 0))
-        XCTAssertEqual(resturants[1].resturantName, restViewModel.resturantName(index: 1))
-        XCTAssertEqual(resturants[2].resturantName, restViewModel.resturantName(index: 2))
+        let restViewModels = resturants.map{ResturantViewModel(resturant: $0)}
+        XCTAssertEqual(resturants[0].resturantName, restViewModels[0].currentResturantName())
+        XCTAssertEqual(resturants[1].resturantName, restViewModels[1].currentResturantName())
+        XCTAssertEqual(resturants[2].resturantName, restViewModels[2].currentResturantName())
     }
     
-    func testResturantMenu() {
+    func testResturantID() {
         let resturants = MockData.fetchMockResturants()
-        let restViewModel = ResturantViewModel(resturants: resturants)
-        XCTAssertEqual(resturants[0].resturantMenu.subMenus[0].dishes[0].name, restViewModel.resturantMenu(index: 0).subMenus[0].dishes[0].name)
-    }
-    
-    func testSubMenuCount() {
-        guard let menu = menu else {
-            XCTAssert(false)
-            return}
-        let menuViewModel = MenusViewModel(menu: menu)
-        XCTAssertEqual(menu.subMenus.count, 3)
-        XCTAssertEqual(menu.subMenus.count, menuViewModel.subMenusCount())
-    }
-    
-    func testDishCount() {
-        guard let menu = menu else {
-            XCTAssert(false)
-            return}
-        let menuViewModel = MenusViewModel(menu: menu)
-        XCTAssertEqual(menu.subMenus[0].dishes.count, 3)
-        XCTAssertEqual(menu.subMenus[0].dishes.count, menuViewModel.dishesCount(section: 0))
-        XCTAssertEqual(menu.subMenus[1].dishes.count, menuViewModel.dishesCount(section: 1))
-        XCTAssertEqual(menu.subMenus[2].dishes.count, menuViewModel.dishesCount(section: 2))
-    }
-    
-    func testSelectDishText() {
-        guard let menu = menu else {
-            XCTAssert(false)
-            return}
-        let menuViewModel = MenusViewModel(menu: menu)
-        let indexPath = IndexPath(row: 0, section: 0)
-        let dish = menu.subMenus[indexPath.section].dishes[indexPath.row]
-        XCTAssertEqual(dish.name, menuViewModel.selectDishText(indexPath: indexPath).name)
-        XCTAssertEqual(dish.price, menuViewModel.selectDishText(indexPath: indexPath).price)
+        let restViewModels = resturants.map{ResturantViewModel(resturant: $0)}
+        XCTAssertEqual(resturants[0].resturantID, restViewModels[0].currentResturantID())
+        XCTAssertEqual(resturants[1].resturantID, restViewModels[1].currentResturantID())
+        XCTAssertEqual(resturants[2].resturantID, restViewModels[2].currentResturantID())
     }
 
 }

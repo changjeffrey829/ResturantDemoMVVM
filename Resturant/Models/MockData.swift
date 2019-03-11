@@ -12,9 +12,9 @@ struct MockData {
     
     static func fetchMockResturants() -> [Resturant] {
         
-        let cheapRest = Resturant(resturantMenu: fetchMockMenu(), resturantName: "cheap resturant", resturantNumber: 1)
-        let midRest = Resturant(resturantMenu: fetchMockMenu(basePrice: 2.00), resturantName: "mid resturant", resturantNumber: 2)
-        let expRest = Resturant(resturantMenu: fetchMockMenu(basePrice: 3.00), resturantName: "expensive resturant", resturantNumber: 3)
+        let cheapRest = Resturant(resturantMenu: fetchMockMenu(), resturantName: "cheap resturant", resturantID: 1)
+        let midRest = Resturant(resturantMenu: fetchMockMenu(basePrice: 2.00), resturantName: "mid resturant", resturantID: 2)
+        let expRest = Resturant(resturantMenu: fetchMockMenu(basePrice: 3.00), resturantName: "expensive resturant", resturantID: 3)
         return [cheapRest, midRest, expRest]
     }
     
