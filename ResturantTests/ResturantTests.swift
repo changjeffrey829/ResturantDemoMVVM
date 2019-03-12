@@ -23,13 +23,13 @@ class ResturantTests: XCTestCase {
     
     func testSubMenuCount() {
         let resturants = MockData.fetchMockResturants()
-        let restVMs = resturants.map{ResturantViewModel(resturant: $0)}
+        let restVMs = resturants.map {ResturantViewModel(resturant: $0)}
         XCTAssertEqual(resturants[0].resturantMenu.subMenus.count, restVMs[0].subMenuCount())
     }
     
     func testDishCount() {
         let resturants = MockData.fetchMockResturants()
-        let restViewModels = resturants.map{ResturantViewModel(resturant: $0)}
+        let restViewModels = resturants.map {ResturantViewModel(resturant: $0)}
         XCTAssertEqual(resturants[0].resturantMenu.subMenus[0].dishes.count, restViewModels[0].dishCount(section: 0))
         XCTAssertEqual(resturants[0].resturantMenu.subMenus[1].dishes.count, restViewModels[0].dishCount(section: 1))
         XCTAssertEqual(resturants[0].resturantMenu.subMenus[2].dishes.count, restViewModels[0].dishCount(section: 2))

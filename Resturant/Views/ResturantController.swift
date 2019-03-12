@@ -34,7 +34,7 @@ extension ResturantController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MenuTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? MenuTableCell ?? UITableViewCell()
         cell.textLabel?.text = resturantViewModel?.dishName(indexPath: indexPath)
         cell.detailTextLabel?.text = resturantViewModel?.dishPrice(indexPath: indexPath)
         return cell

@@ -10,5 +10,4 @@ import Foundation
 
 struct Group {
     var users = [User]()
-    
 }

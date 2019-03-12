@@ -12,5 +12,4 @@ struct Resturant {
     var resturantMenu: Menu
     let resturantName: String
     let resturantID: Int
-    
 }

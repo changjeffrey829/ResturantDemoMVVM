@@ -12,5 +12,4 @@ struct User {
     let firstName: String
     let lastName: String
     var phoneNumber: Int
-    
 }

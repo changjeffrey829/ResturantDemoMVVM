@@ -21,8 +21,7 @@ class HomeTableViewController: UITableViewController {
     
     private func fetchData() {
         guard let resturants = NetworkManager.share.fetchData() else {return}
-        resturantViewModel = resturants.map{return ResturantViewModel(resturant: $0)}
-        
+        resturantViewModel = resturants.map {return ResturantViewModel(resturant: $0)}
     }
 }
 
