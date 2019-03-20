@@ -9,7 +9,7 @@
 import Foundation
 
 struct Resturant {
-    var resturantMenu: [Menu]
+    var menus: [Menu]
     let resturantName: String
     let resturantID: Int
 }

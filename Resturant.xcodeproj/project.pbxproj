@@ -10,7 +10,6 @@
 		04642BFD21A65E12009B9128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642BFC21A65E12009B9128 /* AppDelegate.swift */; };
 		04642BFF21A65E12009B9128 /* ResturantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642BFE21A65E12009B9128 /* ResturantController.swift */; };
 		04642C0421A65E15009B9128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04642C0321A65E15009B9128 /* Assets.xcassets */; };
-		04642C0721A65E15009B9128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04642C0521A65E15009B9128 /* LaunchScreen.storyboard */; };
 		04642C1221A65E15009B9128 /* ResturantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1121A65E15009B9128 /* ResturantTests.swift */; };
 		04642C1D21A65E76009B9128 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1C21A65E76009B9128 /* Menu.swift */; };
 		04642C2121A65EB0009B9128 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C2021A65EB0009B9128 /* Dish.swift */; };
@@ -23,7 +22,6 @@
 		04642C3521AD12A0009B9128 /* ResturantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C3421AD12A0009B9128 /* ResturantViewModel.swift */; };
 		04642C3821AD292E009B9128 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C3721AD292E009B9128 /* MenuTableCell.swift */; };
 		04B5D525221C5AA400BD2A80 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D524221C5AA400BD2A80 /* Coordinator.swift */; };
-		04B5D68E2241F08300BD2A80 /* DishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D68D2241F08300BD2A80 /* DishTests.swift */; };
 		04B5D6902242022100BD2A80 /* ResturantHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D68F2242022100BD2A80 /* ResturantHeaderView.swift */; };
 		BAA53FA88635D7F27B57A3FC /* Pods_Resturant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE8C70E89E29998D20080B2 /* Pods_Resturant.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +41,6 @@
 		04642BFC21A65E12009B9128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04642BFE21A65E12009B9128 /* ResturantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantController.swift; sourceTree = "<group>"; };
 		04642C0321A65E15009B9128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04642C0621A65E15009B9128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04642C0821A65E15009B9128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04642C0D21A65E15009B9128 /* ResturantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResturantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04642C1121A65E15009B9128 /* ResturantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantTests.swift; sourceTree = "<group>"; };
@@ -59,7 +56,6 @@
 		04642C3421AD12A0009B9128 /* ResturantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantViewModel.swift; sourceTree = "<group>"; };
 		04642C3721AD292E009B9128 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		04B5D524221C5AA400BD2A80 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		04B5D68D2241F08300BD2A80 /* DishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTests.swift; sourceTree = "<group>"; };
 		04B5D68F2242022100BD2A80 /* ResturantHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantHeaderView.swift; sourceTree = "<group>"; };
 		13DCCEE491D71C2D2FFC9C82 /* Pods-Resturant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resturant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resturant/Pods-Resturant.release.xcconfig"; sourceTree = "<group>"; };
 		4BE8C70E89E29998D20080B2 /* Pods_Resturant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resturant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +110,6 @@
 				04642C3621AD12C4009B9128 /* Views */,
 				04642C2921A67636009B9128 /* ViewModels */,
 				04642C0321A65E15009B9128 /* Assets.xcassets */,
-				04642C0521A65E15009B9128 /* LaunchScreen.storyboard */,
 				04642C0821A65E15009B9128 /* Info.plist */,
 			);
 			path = Resturant;
@@ -124,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				04642C1121A65E15009B9128 /* ResturantTests.swift */,
-				04B5D68D2241F08300BD2A80 /* DishTests.swift */,
 				04642C1321A65E15009B9128 /* Info.plist */,
 			);
 			path = ResturantTests;
@@ -263,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04642C0721A65E15009B9128 /* LaunchScreen.storyboard in Resources */,
 				04642C0421A65E15009B9128 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04642C1221A65E15009B9128 /* ResturantTests.swift in Sources */,
-				04B5D68E2241F08300BD2A80 /* DishTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,17 +347,6 @@
 			targetProxy = 04642C0E21A65E15009B9128 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		04642C0521A65E15009B9128 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04642C0621A65E15009B9128 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04642C1421A65E15009B9128 /* Debug */ = {
