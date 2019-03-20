@@ -23,6 +23,9 @@ class ResturantController: UITableViewController {
         tableView.register(MenuTableCell.self, forCellReuseIdentifier: cellID)
         
     }
+    deinit {
+        print("getting memory back")
+    }
 }
 
 extension ResturantController {

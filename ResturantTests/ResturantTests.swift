@@ -24,34 +24,34 @@ class ResturantTests: XCTestCase {
     func testSubMenuCount() {
         setUp()
         let vm = ResturantViewModel(resturant: sut)
-        XCTAssertEqual(sut.resturantMenu.count, vm.subMenuCount())
+        XCTAssertEqual(sut.menus.count, vm.subMenuCount())
         tearDown()
     }
     
     func testDishCount() {
         setUp()
         let vm = ResturantViewModel(resturant: sut)
-        XCTAssertEqual(sut.resturantMenu[0].dishes.count, vm.dishCount(section: 0))
-        XCTAssertEqual(sut.resturantMenu[1].dishes.count, vm.dishCount(section: 1))
-        XCTAssertEqual(sut.resturantMenu[2].dishes.count, vm.dishCount(section: 2))
+        XCTAssertEqual(sut.menus[0].dishes.count, vm.dishCount(section: 0))
+        XCTAssertEqual(sut.menus[1].dishes.count, vm.dishCount(section: 1))
+        XCTAssertEqual(sut.menus[2].dishes.count, vm.dishCount(section: 2))
         tearDown()
     }
     
     func testDishName() {
         setUp()
         let vm = ResturantViewModel(resturant: sut)
-        XCTAssertEqual(sut.resturantMenu[0].dishes[0].name, vm.dishName(indexPath: IndexPath(item: 0, section: 0)))
-        XCTAssertEqual(sut.resturantMenu[0].dishes[1].name, vm.dishName(indexPath: IndexPath(item: 1, section: 0)))
-        XCTAssertEqual(sut.resturantMenu[0].dishes[2].name, vm.dishName(indexPath: IndexPath(item: 2, section: 0)))
+        XCTAssertEqual(sut.menus[0].dishes[0].name, vm.dishName(indexPath: IndexPath(item: 0, section: 0)))
+        XCTAssertEqual(sut.menus[0].dishes[1].name, vm.dishName(indexPath: IndexPath(item: 1, section: 0)))
+        XCTAssertEqual(sut.menus[0].dishes[2].name, vm.dishName(indexPath: IndexPath(item: 2, section: 0)))
         tearDown()
     }
     
     func testDishPrice() {
         setUp()
         let vm = ResturantViewModel(resturant: sut)
-        XCTAssertEqual("\(sut.resturantMenu[0].dishes[0].price)", vm.dishPrice(indexPath: IndexPath(item: 0, section: 0)))
-        XCTAssertEqual("\(sut.resturantMenu[0].dishes[1].price)", vm.dishPrice(indexPath: IndexPath(item: 1, section: 0)))
-        XCTAssertEqual("\(sut.resturantMenu[0].dishes[2].price)", vm.dishPrice(indexPath: IndexPath(item: 2, section: 0)))
+        XCTAssertEqual("\(sut.menus[0].dishes[0].price)", vm.dishPrice(indexPath: IndexPath(item: 0, section: 0)))
+        XCTAssertEqual("\(sut.menus[0].dishes[1].price)", vm.dishPrice(indexPath: IndexPath(item: 1, section: 0)))
+        XCTAssertEqual("\(sut.menus[0].dishes[2].price)", vm.dishPrice(indexPath: IndexPath(item: 2, section: 0)))
         tearDown()
     }
     

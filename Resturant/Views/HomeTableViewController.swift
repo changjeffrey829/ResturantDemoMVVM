@@ -10,7 +10,10 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var resturantViewModel = [ResturantViewModel]()
+    var coordinator: MainCoordinator?
+    
+    var resturantViewModels = [ResturantViewModel]()
+    
     var cellID = "restCellID"
     
     override func viewDidLoad() {
@@ -21,24 +24,22 @@ class HomeTableViewController: UITableViewController {
     
     private func fetchData() {
         guard let resturants = NetworkManager.share.fetchData() else {return}
-        resturantViewModel = resturants.map {return ResturantViewModel(resturant: $0)}
+        resturantViewModels = resturants.map {return ResturantViewModel(resturant: $0)}
     }
 }
 
 extension HomeTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resturantViewModel.count
+        return resturantViewModels.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = ResturantController()
-        vc.resturantViewModel = resturantViewModel[indexPath.item]
-        navigationController?.pushViewController(vc, animated: true)
+        coordinator?.launchResturantVC(viewModel: resturantViewModels[indexPath.item])
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = resturantViewModel[indexPath.item].currentResturantName()
+        cell.textLabel?.text = resturantViewModels[indexPath.item].currentResturantName()
         return cell
     }
 }
