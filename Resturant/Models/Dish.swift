@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DishType {
+enum DishType: String {
     case appetizer
     case breakfast
     case lunch

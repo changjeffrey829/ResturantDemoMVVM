@@ -15,6 +15,7 @@ class ResturantController: UITableViewController {
             
         }
     }
+    
     var cellID = "menuCellID"
     
     override func viewDidLoad() {
@@ -25,6 +26,14 @@ class ResturantController: UITableViewController {
 }
 
 extension ResturantController {
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = ResturantHeaderView()
+        let dishType = resturantViewModel?.dishType(section: section)
+        view.label.text =  dishType?.rawValue ?? ""
+        return view
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return resturantViewModel?.subMenuCount() ?? 0
     }

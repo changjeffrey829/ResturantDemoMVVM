@@ -20,26 +20,32 @@ struct MockData {
         return [cheapRest, midRest, expRest]
     }
     
-    static func fetchMockMenu(basePrice: Double = 1.00) -> Menu {
+    static func fetchMenu(dishType: DishType, basePrice: Double) -> Menu {
+        let dishName: String
+        switch dishType {
+        case .breakfast:
+            dishName = dishType.rawValue
+        case .lunch:
+            dishName = dishType.rawValue
+        case .dinner:
+            dishName = dishType.rawValue
+        case .appetizer:
+            dishName = dishType.rawValue
+        case .dessert:
+            dishName = dishType.rawValue
+        }
+        let appDishOne = Dish(name: "\(dishName) \(basePrice)", price: basePrice * 1.00)
+        let appDishTwo = Dish(name: "\(dishName) \(basePrice * 2)", price: basePrice * 2.00)
+        let appDishThree = Dish(name: "\(dishName) \(basePrice * 3)", price: basePrice * 3.00)
+        return Menu(dishType: dishType, dishes: [appDishOne, appDishTwo, appDishThree])
+    }
+    
+    static func fetchMockMenu(basePrice: Double = 1.00) -> [Menu] {
         
-        let appDishOne = Dish(name: "app\(basePrice)", price: basePrice * 1.00)
-        let appDishTwo = Dish(name: "app\(basePrice * 2)", price: basePrice * 2.00)
-        let appDishThree = Dish(name: "app\(basePrice * 3)", price: basePrice * 3.00)
-        let appetizerDishes = [appDishOne, appDishTwo, appDishThree]
-        let appetizerSubMenu = SubMenu(dishType: .appetizer, dishes: appetizerDishes)
+        let appMenu = fetchMenu(dishType: .appetizer, basePrice: basePrice)
+        let lunchMenu = fetchMenu(dishType: .lunch, basePrice: basePrice)
+        let dinnerMenu = fetchMenu(dishType: .dinner, basePrice: basePrice)
         
-        let lunchDishOne = Dish(name: "lunch\(basePrice)", price: basePrice * 1.00)
-        let lunchDishTwo = Dish(name: "lunch\(basePrice * 2)", price: basePrice * 2.00)
-        let lunchDishThree = Dish(name: "lunch\(basePrice * 3)", price: basePrice * 3.00)
-        let lunchDishes = [lunchDishOne, lunchDishTwo, lunchDishThree]
-        let lunchSubMenu = SubMenu(dishType: .lunch, dishes: lunchDishes)
-        
-        let dinnerDishOne = Dish(name: "dinner\(basePrice)", price: basePrice * 1.00)
-        let dinnerDishTwo = Dish(name: "dinner\(basePrice * 2)", price: basePrice * 2.00)
-        let dinnerDishThree = Dish(name: "dinner\(basePrice * 3)", price: basePrice * 3.00)
-        let dinnerDishes = [dinnerDishOne, dinnerDishTwo, dinnerDishThree]
-        let dinnerSubMenu = SubMenu(dishType: .dinner, dishes: dinnerDishes)
-        let menu = Menu(subMenus: [appetizerSubMenu, lunchSubMenu, dinnerSubMenu])
-        return menu
+        return [appMenu, lunchMenu, dinnerMenu]
     }
 }

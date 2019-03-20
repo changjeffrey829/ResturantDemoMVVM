@@ -13,7 +13,6 @@
 		04642C0721A65E15009B9128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04642C0521A65E15009B9128 /* LaunchScreen.storyboard */; };
 		04642C1221A65E15009B9128 /* ResturantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1121A65E15009B9128 /* ResturantTests.swift */; };
 		04642C1D21A65E76009B9128 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1C21A65E76009B9128 /* Menu.swift */; };
-		04642C1F21A65EA6009B9128 /* SubMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1E21A65EA6009B9128 /* SubMenu.swift */; };
 		04642C2121A65EB0009B9128 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C2021A65EB0009B9128 /* Dish.swift */; };
 		04642C2321A65EB8009B9128 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C2221A65EB8009B9128 /* User.swift */; };
 		04642C2521A65ECC009B9128 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C2421A65ECC009B9128 /* Resturant.swift */; };
@@ -24,6 +23,8 @@
 		04642C3521AD12A0009B9128 /* ResturantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C3421AD12A0009B9128 /* ResturantViewModel.swift */; };
 		04642C3821AD292E009B9128 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C3721AD292E009B9128 /* MenuTableCell.swift */; };
 		04B5D525221C5AA400BD2A80 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D524221C5AA400BD2A80 /* Coordinator.swift */; };
+		04B5D68E2241F08300BD2A80 /* DishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D68D2241F08300BD2A80 /* DishTests.swift */; };
+		04B5D6902242022100BD2A80 /* ResturantHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D68F2242022100BD2A80 /* ResturantHeaderView.swift */; };
 		BAA53FA88635D7F27B57A3FC /* Pods_Resturant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE8C70E89E29998D20080B2 /* Pods_Resturant.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +49,6 @@
 		04642C1121A65E15009B9128 /* ResturantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantTests.swift; sourceTree = "<group>"; };
 		04642C1321A65E15009B9128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04642C1C21A65E76009B9128 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		04642C1E21A65EA6009B9128 /* SubMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenu.swift; sourceTree = "<group>"; };
 		04642C2021A65EB0009B9128 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		04642C2221A65EB8009B9128 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04642C2421A65ECC009B9128 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		04642C3421AD12A0009B9128 /* ResturantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantViewModel.swift; sourceTree = "<group>"; };
 		04642C3721AD292E009B9128 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		04B5D524221C5AA400BD2A80 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		04B5D68D2241F08300BD2A80 /* DishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTests.swift; sourceTree = "<group>"; };
+		04B5D68F2242022100BD2A80 /* ResturantHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantHeaderView.swift; sourceTree = "<group>"; };
 		13DCCEE491D71C2D2FFC9C82 /* Pods-Resturant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resturant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resturant/Pods-Resturant.release.xcconfig"; sourceTree = "<group>"; };
 		4BE8C70E89E29998D20080B2 /* Pods_Resturant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resturant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9504CADBAFA362A3332E7D1 /* Pods-Resturant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resturant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resturant/Pods-Resturant.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				04642C1121A65E15009B9128 /* ResturantTests.swift */,
+				04B5D68D2241F08300BD2A80 /* DishTests.swift */,
 				04642C1321A65E15009B9128 /* Info.plist */,
 			);
 			path = ResturantTests;
@@ -133,7 +136,6 @@
 				04642C2221A65EB8009B9128 /* User.swift */,
 				04642C2421A65ECC009B9128 /* Resturant.swift */,
 				04642C1C21A65E76009B9128 /* Menu.swift */,
-				04642C1E21A65EA6009B9128 /* SubMenu.swift */,
 				04642C2021A65EB0009B9128 /* Dish.swift */,
 				04642C2621A65ED6009B9128 /* Group.swift */,
 				04642C3021ABFC95009B9128 /* MockData.swift */,
@@ -155,6 +157,7 @@
 			children = (
 				04642C3221AD0F8F009B9128 /* HomeTableViewController.swift */,
 				04642BFE21A65E12009B9128 /* ResturantController.swift */,
+				04B5D68F2242022100BD2A80 /* ResturantHeaderView.swift */,
 				04642C3721AD292E009B9128 /* MenuTableCell.swift */,
 			);
 			path = Views;
@@ -325,12 +328,12 @@
 				04642C2121A65EB0009B9128 /* Dish.swift in Sources */,
 				04642C3821AD292E009B9128 /* MenuTableCell.swift in Sources */,
 				04642C2721A65ED6009B9128 /* Group.swift in Sources */,
+				04B5D6902242022100BD2A80 /* ResturantHeaderView.swift in Sources */,
 				04642C2321A65EB8009B9128 /* User.swift in Sources */,
 				04642BFF21A65E12009B9128 /* ResturantController.swift in Sources */,
 				04642C3321AD0F8F009B9128 /* HomeTableViewController.swift in Sources */,
 				04642BFD21A65E12009B9128 /* AppDelegate.swift in Sources */,
 				04642C3121ABFC95009B9128 /* MockData.swift in Sources */,
-				04642C1F21A65EA6009B9128 /* SubMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04642C1221A65E15009B9128 /* ResturantTests.swift in Sources */,
+				04B5D68E2241F08300BD2A80 /* DishTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

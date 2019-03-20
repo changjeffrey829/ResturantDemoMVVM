@@ -10,7 +10,7 @@ import Foundation
 
 struct ResturantViewModel {
     
-    fileprivate var resturantMenu: Menu
+    fileprivate var resturantMenu: [Menu]
     fileprivate let resturantName: String
     fileprivate let resturantID: Int
     init(resturant: Resturant) {
@@ -28,18 +28,22 @@ struct ResturantViewModel {
     }
     
     func subMenuCount() -> Int {
-        return resturantMenu.subMenus.count
+        return resturantMenu.count
+    }
+    
+    func dishType(section: Int) -> DishType {
+        return resturantMenu[section].dishType
     }
     
     func dishCount(section: Int) -> Int {
-        return resturantMenu.subMenus[section].dishes.count
+        return resturantMenu[section].dishes.count
     }
     
     func dishName(indexPath: IndexPath) -> String {
-        return resturantMenu.subMenus[indexPath.section].dishes[indexPath.item].name
+        return resturantMenu[indexPath.section].dishes[indexPath.item].name
     }
     
     func dishPrice(indexPath: IndexPath) -> String {
-        return "\(resturantMenu.subMenus[indexPath.section].dishes[indexPath.item].price)"
+        return "\(resturantMenu[indexPath.section].dishes[indexPath.item].price)"
     }
 }

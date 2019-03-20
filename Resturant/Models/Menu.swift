@@ -9,8 +9,10 @@
 import Foundation
 
 struct Menu {
-    var subMenus = [SubMenu]()
-    init(subMenus: [SubMenu]) {
-        self.subMenus = subMenus
+    let dishType: DishType
+    var dishes = [Dish]()
+    init(dishType: DishType, dishes: [Dish]) {
+        self.dishType = dishType
+        self.dishes = dishes
     }
 }
