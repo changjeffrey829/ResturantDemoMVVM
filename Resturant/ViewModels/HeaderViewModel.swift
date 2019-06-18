@@ -9,9 +9,7 @@
 import Foundation
 
 class HeaderViewModel {
-    
     private (set) var dishTypeString: String
-    
     init(dishTypeString: String) {
         self.dishTypeString = dishTypeString
     }

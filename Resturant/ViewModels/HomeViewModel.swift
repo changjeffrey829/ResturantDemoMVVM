@@ -10,7 +10,6 @@ import Foundation
 
 class HomeViewModel {
     static let cellID = "homeCellID"
-    
     private var resturantViewModels = [ResturantViewModel]()
     private let networkService: NetworkManager
     

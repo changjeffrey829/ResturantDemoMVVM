@@ -13,7 +13,6 @@ class ResturantHeaderView: UIView {
     var headerViewModel: HeaderViewModel? {
         didSet {
             label.text = headerViewModel?.dishTypeString
-//            print("what is this \(headerViewModel?.dishTypeString)")
         }
     }
     
