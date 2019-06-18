@@ -9,7 +9,7 @@
 import XCTest
 @testable import Resturant
 
-class ResturantTests: XCTestCase {
+class ResturantViewModelTests: XCTestCase {
     
     var sut: Resturant!
     
@@ -34,24 +34,6 @@ class ResturantTests: XCTestCase {
         XCTAssertEqual(sut.menus[0].dishes.count, vm.dishCount(section: 0))
         XCTAssertEqual(sut.menus[1].dishes.count, vm.dishCount(section: 1))
         XCTAssertEqual(sut.menus[2].dishes.count, vm.dishCount(section: 2))
-        tearDown()
-    }
-    
-    func testDishName() {
-        setUp()
-        let vm = ResturantViewModel(resturant: sut)
-        XCTAssertEqual(sut.menus[0].dishes[0].name, vm.dishName(indexPath: IndexPath(item: 0, section: 0)))
-        XCTAssertEqual(sut.menus[0].dishes[1].name, vm.dishName(indexPath: IndexPath(item: 1, section: 0)))
-        XCTAssertEqual(sut.menus[0].dishes[2].name, vm.dishName(indexPath: IndexPath(item: 2, section: 0)))
-        tearDown()
-    }
-    
-    func testDishPrice() {
-        setUp()
-        let vm = ResturantViewModel(resturant: sut)
-        XCTAssertEqual("\(sut.menus[0].dishes[0].price)", vm.dishPrice(indexPath: IndexPath(item: 0, section: 0)))
-        XCTAssertEqual("\(sut.menus[0].dishes[1].price)", vm.dishPrice(indexPath: IndexPath(item: 1, section: 0)))
-        XCTAssertEqual("\(sut.menus[0].dishes[2].price)", vm.dishPrice(indexPath: IndexPath(item: 2, section: 0)))
         tearDown()
     }
     

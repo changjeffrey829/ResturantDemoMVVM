@@ -25,14 +25,14 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = HomeTableViewController()
+        let homeViewModel = HomeViewModel()
+        let vc = HomeTableViewController(homeViewModel: homeViewModel)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func launchResturantVC(viewModel: ResturantViewModel) {
-        let vc = ResturantController()
-        vc.resturantViewModel = viewModel
+    func launchResturantVC(resturantViewModel: ResturantViewModel) {
+        let vc = ResturantController(resturantViewModel: resturantViewModel)
         navigationController.pushViewController(vc, animated: true)
     }
     

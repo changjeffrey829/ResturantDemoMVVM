@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B23B622B861B2001E1774 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B23B522B861B2001E1774 /* HomeViewModel.swift */; };
+		040B23B822B8647C001E1774 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B23B722B8647C001E1774 /* ResturantCell.swift */; };
+		040B23BA22B86AAB001E1774 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B23B922B86AAB001E1774 /* MenuViewModel.swift */; };
+		040B23BC22B86F26001E1774 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B23BB22B86F26001E1774 /* MenuViewModelTests.swift */; };
+		040B23BE22B86F35001E1774 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B23BD22B86F35001E1774 /* HomeViewModelTests.swift */; };
+		040B23C022B873E0001E1774 /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B23BF22B873E0001E1774 /* HeaderViewModel.swift */; };
 		04642BFD21A65E12009B9128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642BFC21A65E12009B9128 /* AppDelegate.swift */; };
 		04642BFF21A65E12009B9128 /* ResturantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642BFE21A65E12009B9128 /* ResturantController.swift */; };
 		04642C0421A65E15009B9128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04642C0321A65E15009B9128 /* Assets.xcassets */; };
-		04642C1221A65E15009B9128 /* ResturantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1121A65E15009B9128 /* ResturantTests.swift */; };
+		04642C1221A65E15009B9128 /* ResturantViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1121A65E15009B9128 /* ResturantViewModelTests.swift */; };
 		04642C1D21A65E76009B9128 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1C21A65E76009B9128 /* Menu.swift */; };
 		04642C2121A65EB0009B9128 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C2021A65EB0009B9128 /* Dish.swift */; };
 		04642C2321A65EB8009B9128 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C2221A65EB8009B9128 /* User.swift */; };
@@ -37,13 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040B23B522B861B2001E1774 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		040B23B722B8647C001E1774 /* ResturantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
+		040B23B922B86AAB001E1774 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		040B23BB22B86F26001E1774 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
+		040B23BD22B86F35001E1774 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		040B23BF22B873E0001E1774 /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
 		04642BF921A65E12009B9128 /* Resturant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resturant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04642BFC21A65E12009B9128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04642BFE21A65E12009B9128 /* ResturantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantController.swift; sourceTree = "<group>"; };
 		04642C0321A65E15009B9128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04642C0821A65E15009B9128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04642C0D21A65E15009B9128 /* ResturantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResturantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04642C1121A65E15009B9128 /* ResturantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantTests.swift; sourceTree = "<group>"; };
+		04642C1121A65E15009B9128 /* ResturantViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantViewModelTests.swift; sourceTree = "<group>"; };
 		04642C1321A65E15009B9128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04642C1C21A65E76009B9128 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		04642C2021A65EB0009B9128 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
@@ -109,6 +121,7 @@
 				04642C2821A65EF2009B9128 /* Models */,
 				04642C3621AD12C4009B9128 /* Views */,
 				04642C2921A67636009B9128 /* ViewModels */,
+				04F0731C227C21AC00B807ED /* Controllers */,
 				04642C0321A65E15009B9128 /* Assets.xcassets */,
 				04642C0821A65E15009B9128 /* Info.plist */,
 			);
@@ -118,7 +131,9 @@
 		04642C1021A65E15009B9128 /* ResturantTests */ = {
 			isa = PBXGroup;
 			children = (
-				04642C1121A65E15009B9128 /* ResturantTests.swift */,
+				04642C1121A65E15009B9128 /* ResturantViewModelTests.swift */,
+				040B23BB22B86F26001E1774 /* MenuViewModelTests.swift */,
+				040B23BD22B86F35001E1774 /* HomeViewModelTests.swift */,
 				04642C1321A65E15009B9128 /* Info.plist */,
 			);
 			path = ResturantTests;
@@ -142,6 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				04642C3421AD12A0009B9128 /* ResturantViewModel.swift */,
+				040B23B922B86AAB001E1774 /* MenuViewModel.swift */,
+				040B23BF22B873E0001E1774 /* HeaderViewModel.swift */,
+				040B23B522B861B2001E1774 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -149,12 +167,20 @@
 		04642C3621AD12C4009B9128 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04642C3221AD0F8F009B9128 /* HomeTableViewController.swift */,
-				04642BFE21A65E12009B9128 /* ResturantController.swift */,
 				04B5D68F2242022100BD2A80 /* ResturantHeaderView.swift */,
 				04642C3721AD292E009B9128 /* MenuTableCell.swift */,
+				040B23B722B8647C001E1774 /* ResturantCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		04F0731C227C21AC00B807ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04642C3221AD0F8F009B9128 /* HomeTableViewController.swift */,
+				04642BFE21A65E12009B9128 /* ResturantController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		2691C8726EE854629FF38C48 /* Frameworks */ = {
@@ -320,7 +346,9 @@
 				04B5D525221C5AA400BD2A80 /* Coordinator.swift in Sources */,
 				04642C2D21A7EA03009B9128 /* NetworkManager.swift in Sources */,
 				04642C3521AD12A0009B9128 /* ResturantViewModel.swift in Sources */,
+				040B23C022B873E0001E1774 /* HeaderViewModel.swift in Sources */,
 				04642C2121A65EB0009B9128 /* Dish.swift in Sources */,
+				040B23B822B8647C001E1774 /* ResturantCell.swift in Sources */,
 				04642C3821AD292E009B9128 /* MenuTableCell.swift in Sources */,
 				04642C2721A65ED6009B9128 /* Group.swift in Sources */,
 				04B5D6902242022100BD2A80 /* ResturantHeaderView.swift in Sources */,
@@ -328,6 +356,8 @@
 				04642BFF21A65E12009B9128 /* ResturantController.swift in Sources */,
 				04642C3321AD0F8F009B9128 /* HomeTableViewController.swift in Sources */,
 				04642BFD21A65E12009B9128 /* AppDelegate.swift in Sources */,
+				040B23BA22B86AAB001E1774 /* MenuViewModel.swift in Sources */,
+				040B23B622B861B2001E1774 /* HomeViewModel.swift in Sources */,
 				04642C3121ABFC95009B9128 /* MockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04642C1221A65E15009B9128 /* ResturantTests.swift in Sources */,
+				04642C1221A65E15009B9128 /* ResturantViewModelTests.swift in Sources */,
+				040B23BE22B86F35001E1774 /* HomeViewModelTests.swift in Sources */,
+				040B23BC22B86F26001E1774 /* MenuViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

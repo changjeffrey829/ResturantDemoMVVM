@@ -10,13 +10,22 @@ import Foundation
 
 struct ResturantViewModel {
     
-    fileprivate var menus: [Menu]
-    fileprivate let resturantName: String
-    fileprivate let resturantID: Int
+    static var cellID = "menuCellID"
+    
+    private var menus: [Menu]
+    private let resturantName: String
+    private let resturantID: Int
+    
     init(resturant: Resturant) {
         self.resturantName = resturant.resturantName
         self.menus = resturant.menus
         self.resturantID = resturant.resturantID
+    }
+    
+    func createMenuViewModel(indexPath: IndexPath) -> MenuViewModel {
+        let name = menus[indexPath.section].dishes[indexPath.item].name
+        let price = "\(menus[indexPath.section].dishes[indexPath.item].price)"
+        return MenuViewModel(dishName: name, dishPrice: price)
     }
     
     func currentResturantName() -> String {
@@ -31,19 +40,16 @@ struct ResturantViewModel {
         return menus.count
     }
     
+    func createHeaderViewModel(section: Int) -> HeaderViewModel {
+        let dishType = menus[section].dishType
+        return HeaderViewModel(dishTypeString: dishType.rawValue)
+    }
+    
     func dishType(section: Int) -> DishType {
         return menus[section].dishType
     }
     
     func dishCount(section: Int) -> Int {
         return menus[section].dishes.count
-    }
-    
-    func dishName(indexPath: IndexPath) -> String {
-        return menus[indexPath.section].dishes[indexPath.item].name
-    }
-    
-    func dishPrice(indexPath: IndexPath) -> String {
-        return "\(menus[indexPath.section].dishes[indexPath.item].price)"
     }
 }

@@ -10,6 +10,13 @@ import UIKit
 
 class ResturantHeaderView: UIView {
     
+    var headerViewModel: HeaderViewModel? {
+        didSet {
+            label.text = headerViewModel?.dishTypeString
+//            print("what is this \(headerViewModel?.dishTypeString)")
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(label)
